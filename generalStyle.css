@@ -1,0 +1,58 @@
+/* General  classes*/
+
+/* Alignments */
+.align-center {
+  margin: auto;
+}
+
+/* bg-colors */
+
+.bg-color-blue {
+  background-color: blue;
+}
+
+.bg-color-red {
+  background-color: red;
+}
+
+.bg-color-green {
+  background-color: green;
+}
+
+.bg-color-orange {
+  background-color: orange;
+}
+/* border */
+
+.border-blue{
+  border: 1px solid blue;
+}
+
+
+/* Font */
+
+.text-bold {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.text-white{
+  color:white;
+}
+.text20px{
+  font-size: 20px;
+}
+
+.text24px{
+  font-size: 24px;
+}
+
+
+.light-weight{
+  font-weight: 400;
+}
+
+
+.list-style-none{
+  list-style: none;
+}
