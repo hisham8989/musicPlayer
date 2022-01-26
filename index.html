@@ -14,148 +14,158 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="full-vh-vw">
-    <header>
-      <!-- divide navbar in left , mid & right sections -->
-      <!-- left section contains logo  -->
-      <!-- mid section contains heading of choice -->
-      <!-- right section contains search bar , bell - icon , Display Picture  -->
+  <body>
+    <div id="music-player-container">
+      <header>
+        <!-- divide navbar in left , mid & right sections -->
+        <!-- left section contains logo  -->
+        <!-- mid section contains heading of choice -->
+        <!-- right section contains search bar , bell - icon , Display Picture  -->
 
-      <nav id="navbar">
-        <!-- Logo icon , name -->
-        <div class="left-container">
-          <ul id="logo">
-            <img src="logo.png" alt="logo" />
-            <li class="text20px list-style-none">
-              Ninja<br /><span class="text-bold">Studio</span>
-            </li>
-          </ul>
-        </div>
+        <nav id="navbar">
+          <!-- Logo icon , name -->
+          <div class="left-container">
+            <ul id="logo">
+              <div id="logo-image-container"></div>
+              <li class="list-style-none">
+                Ninja<br /><span class="text-bold">Studio</span>
+              </li>
+            </ul>
+          </div>
 
-        <!-- heading Name -->
-        <div class="mid-container"><p class="font-size-20">Favorites</p></div>
+          <!-- heading Name -->
+          <div class="mid-container"><p>Favorites</p></div>
 
-        <!-- search bar{magnifine-icon,mic}, bell - icon , Display Picture -->
-        <div class="right-container">
-          <ul id="right-container-list" class="">
-            <li class="list-style-none">
-              <div id="search-bar">
-                <i id="search-icon" class="fas fa-search"></i>
-                <input id="search-input" placeholder="Search" />
-                <i id="mic-icon" class="fas fa-microphone"></i>
+          <!-- search bar{magnifine-icon,mic}, bell - icon , Display Picture -->
+          <div class="right-container">
+            <ul id="right-container-list" class="">
+              <li class="list-style-none">
+                <div id="search-bar">
+                  <i id="search-icon" class="fas fa-search"></i>
+                  <input id="search-input" placeholder="Search" />
+                  <i id="mic-icon" class="fas fa-microphone"></i>
+                </div>
+              </li>
+
+              <li class="list-style-none"><i class="fas fa-bell"></i></li>
+              <li class="list-style-none">
+                <img src="./images/dp.jpg" alt="display picture" id="dp" />
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="content-container">
+        <main>
+          <div id="carousel">
+            <div id="carousel-image"></div>
+          </div>
+          <section id="latest-release">
+            <h2 class="text-white">Latest Release</h2>
+            <div class="song-container">
+              <div class="div1">
+                <div class="image-container"></div>
+                <div class="caption">
+                  <ul>
+                    <li class="list-style-none">MASAKALI</li>
+                    <li class="list-style-none">AUG 11, 2022</li>
+                  </ul>
+                </div>
+                <div class="song-duration">
+                  <ul>
+                    <li class="list-style-none">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </li>
+                    <li class="list-style-none">4:32</li>
+                  </ul>
+                </div>
               </div>
-            </li>
-
-            <li class="list-style-none"><i class="fas fa-bell"></i></li>
-            <li class="list-style-none">
-              <img src="dp.jpg" alt="display picture" id="dp" />
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <div class="content-container">
-      <main>
-        <div id="carousel">
-          <div id="carousel-image"></div>
-        </div>
-        <section id="latest-release">
-          <h2 class="text24px text-white text-bold">Latest Release</h2>
-          <div class="song-container">
-            <div class="yellow div1">
-              <div class="image-container green"></div>
-              <div class="caption">
-                <ul>
-                  <li class="list-style-none">MASAKALI</li>
-                  <li class="list-style-none">AUG 11, 2022</li>
-                </ul>
+              <div class="div2">
+                <div class="image-container"></div>
+                <div class="caption">
+                  <ul>
+                    <li class="list-style-none">MASAKALI</li>
+                    <li class="list-style-none">AUG 11, 2022</li>
+                  </ul>
+                </div>
+                <div class="song-duration">
+                  <ul class="text-white">
+                    <li class="list-style-none">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </li>
+                    <li class="list-style-none">4:32</li>
+                  </ul>
+                </div>
               </div>
-              <div class="song-duration red">
-                <ul>
-                  <li class="list-style-none"><i class="fas fa-ellipsis-h"></i></li>
-                  <li class="list-style-none">4:32</li>
-                </ul>
+              <div class="div3">
+                <div class="image-container"></div>
+                <div class="caption">
+                  <ul>
+                    <li class="list-style-none">MASAKALI</li>
+                    <li class="list-style-none">AUG 11, 2022</li>
+                  </ul>
+                </div>
+                <div class="song-duration">
+                  <ul class="text-white">
+                    <li class="list-style-none">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </li>
+                    <li class="list-style-none">4:32</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="div4">
+                <div class="image-container"></div>
+                <div class="caption">
+                  <ul>
+                    <li class="list-style-none">MASAKALI</li>
+                    <li class="list-style-none">AUG 11, 2022</li>
+                  </ul>
+                </div>
+                <div class="song-duration">
+                  <ul class="text-white">
+                    <li class="list-style-none">
+                      <i class="fas fa-ellipsis-h"></i>
+                    </li>
+                    <li class="list-style-none">4:32</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="div2">
-              <div class="image-container"></div>
-              <div class="caption">
-                <ul>
-                  <li class="list-style-none">MASAKALI</li>
-                  <li class="list-style-none">AUG 11, 2022</li>
-                </ul>
+          </section>
+          <div id="popular-artist-container">
+            <h2 class="text-white text-bold">Popular Artists</h2>
+            <div class="artists-container">
+              <div class="columns artist1">
+                <div class="image1"></div>
+                <p>Ed Sheeran</p>
               </div>
-              <div class="song-duration">
-                <ul class="text-white">
-                  <li class="list-style-none"><i class="fas fa-ellipsis-h"></i></li>
-                  <li class="list-style-none">4:32</li>
-                </ul>
+              <div class="columns artist2">
+                <div class="image2"></div>
+                <p>Cold Play</p>
               </div>
-            </div>
-            <div class="div3">
-              <div class="image-container"></div>
-              <div class="caption">
-                <ul>
-                  <li class="list-style-none">MASAKALI</li>
-                  <li class="list-style-none">AUG 11, 2022</li>
-                </ul>
+              <div class="columns artist3">
+                <div class="image3"></div>
+                <p>Zayn</p>
               </div>
-              <div class="song-duration">
-                <ul class="text-white">
-                  <li class="list-style-none"><i class="fas fa-ellipsis-h"></i></li>
-                  <li class="list-style-none">4:32</li>
-                </ul>
+              <div class="columns artist4">
+                <div class="image4"></div>
+                <p>Charlie Puth</p>
               </div>
-            </div>
-            <div class="div4">
-              <div class="image-container"></div>
-              <div class="caption">
-                <ul>
-                  <li class="list-style-none">MASAKALI</li>
-                  <li class="list-style-none">AUG 11, 2022</li>
-                </ul>
+              <div class="columns artist5">
+                <div class="image5"></div>
+                <p>Imagine Dragon</p>
               </div>
-              <div class="song-duration">
-                <ul class="text-white">
-                  <li class="list-style-none"><i class="fas fa-ellipsis-h"></i></li>
-                  <li class="list-style-none">4:32</li>
-                </ul>
+              <div class="columns artist6">
+                <div class="image6"></div>
+                <p>Bruno Mars</p>
               </div>
             </div>
           </div>
-        </section>
-        <div id="popular-artist-container">
-          <h2 class="text24px text-white text-bold">Popular Artists</h2>
-          <div class="artists-container">
-            <div class="columns artist1">
-              <div class="image1"></div>
-              <p>Ed Sheeran</p>
-            </div>
-            <div class="columns artist2">
-              <div class="image2"></div>
-              <p>Cold Play</p>
-            </div>
-            <div class="columns artist3">
-              <div class="image3"></div>
-              <p>Zayn</p>
-            </div>
-            <div class="columns artist4">
-              <div class="image4"></div>
-              <p>Charlie Puth</p>
-            </div>
-            <div class="columns artist5">
-              <div class="image5"></div>
-              <p>Imagine Dragon</p>
-            </div>
-            <div class="columns artist6">
-              <div class="image6"></div>
-              <p>Bruno Mars</p>
-            </div>
-          </div>
-        </div>
-      </main>
-      <aside class="text-white">I am aside</aside>
+        </main>
+        <aside class="text-white">I am aside</aside>
+      </div>
+      <footer></footer>
     </div>
-    <footer></footer>
   </body>
 </html>

@@ -12,54 +12,77 @@ body {
 :root {
   --bg-color: #0d1127;
   --text-box-bg-color: #12183f;
-  --icon-color:#90A7B1;
-  --text-white:#FAFBFD;
+  --icon-color: #90a7b1;
+  --text-white: #fafbfd;
+  --step--2: clamp(0.69rem, 0.65rem + 0.21vw, 0.80rem);
+  --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1.00rem);
+  --step-0: clamp(1.00rem, 0.90rem + 0.49vw, 1.25rem);
+  --step-1: clamp(1.20rem, 1.06rem + 0.71vw, 1.56rem);
+  --step-2: clamp(1.44rem, 1.24rem + 1.00vw, 1.95rem);
+  --step-3: clamp(1.73rem, 1.45rem + 1.39vw, 2.44rem);
+  --step-4: clamp(2.07rem, 1.69rem + 1.91vw, 3.05rem);
+  --step-5: clamp(2.49rem, 1.97rem + 2.59vw, 3.82rem);
+  --step-6: clamp(2.59rem, 2.27rem + 1.61vw, 3.42rem);
+  --step-7: clamp(3.11rem, 2.66rem + 2.27vw, 4.27rem);
+  --step-8: clamp(3.73rem, 3.10rem + 3.14vw, 5.34rem);
+  --step-9: clamp(3.00rem, 2.34rem + 3.29vw, 4.69rem);
+  --step-10: clamp(3.60rem, 2.72rem + 4.41vw, 5.86rem);
+  --step-11: clamp(4.32rem, 3.15rem + 5.86vw, 7.32rem);
+  --step-12: clamp(5.18rem, 3.63rem + 7.75vw, 9.15rem);
+  --step-13: clamp(6.22rem, 4.18rem + 10.19vw, 11.44rem);
 }
 
-body{
-  height: 100vh;
-  width: 100%;
-}
-/* .full-vh-vw {
-  height: 100vh;
+
+body {
+  display: flex;
+  justify-content: center;
   width: 100vw;
-} */
+  height: 100%;
+}
+
+#music-player-container {
+  height: 100%;
+  min-width: 70%;
+  max-width: 80%;
+}
 
 /* Navbar */
 #navbar {
   height: 6rem;
   display: flex;
-  margin-bottom: 2rem;
+  align-items: center;
   color: whitesmoke;
 }
-
 
 .left-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-grow: 0.4;
+  flex: 0.4 1 20%;
 }
 
 #logo {
   display: flex;
+  align-items: center;
 }
 
-#logo img {
-  height: 3rem;
+#logo-image-container {
+  background-image: url(https://picsum.photos/100/100);
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
 }
 
 .mid-container {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  font-size: var(--step--2);
 }
 
 .right-container {
   flex-grow: 1;
-  /* display: flex;
-  align-items: center; */
 }
 
 #right-container-list {
@@ -80,168 +103,171 @@ body{
 
 #search-input {
   background-color: var(--text-box-bg-color);
-  line-height: 2rem;
-  font-size: large;
+  height: var(--step-3);
+  width: 10rem;
   font-weight: 400;
   border-radius: 12px;
   padding: 0.2rem 2rem;
-  font-size: 1.2rem;
+  font-size: var(--step--2);
   outline: none;
   border: none;
-  color: white;
+  color: var(--text-white);
 }
 
 #search-icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 0.8rem;
-  padding: 0px 0.5rem;
+  transform: translateX(0.5rem) translateY(0.8rem);
+  /* padding: 0px 0.5rem; */
 }
 
 #mic-icon {
   position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 0.8rem;
-  padding: 0px 0.5rem;
+  transform: translateX(-1rem) translateY(0.8rem);
 }
 
-
 #dp {
-  height: 4rem;
-  width: 4rem;
+  height: var(--step-5);
+  width: var(--step-5);
   border-radius: 50%;
 }
 
+/* Nav Bar finished */
+
 /* Main Container */
 
-.content-container{
-  margin: 8rem auto 4rem auto;
-  /* border: 2px solid silver; */
-  max-width: 80%;
-  height: 100%;
+.content-container {
+  margin-top: 3rem;
+  max-width: 90%;
   display: flex;
+  min-height: 100vh;
+
 }
 
-main{
-  width: 70%;
-  border: 2px solid wheat;
-  /* min-height: 100vh; */
-  /* display: inline; */
-  margin: 2px 2px;
+main {
+  min-width: 60%;
+  max-width: 40%;
+  border: 1px solid blue;
 }
 
-aside{
+aside {
   width: 30%;
-  border: 2px solid wheat;
-  height: 100%;
-  margin: 2px 2px;
-  
+  background: lightgray;
 }
 
-#carousel{
-  width:100%;
-  height:25%;
-  position:relative;
-  margin-bottom: 10em;
+#carousel {
+  height: var(--step-12);
+  position: relative;
+  margin-bottom: 5rem;
 }
 
-#carousel #carousel-image{
-  
-  position:absolute;
-  /* transform: translateX(21%) translateY(-25%); */
-  transform: translateX(21%);
-  background-image:url(https://picsum.photos/500/300);
+#carousel #carousel-image {
+  position: absolute;
+  transform: translateX(20%) translateY(-20%);
+  /*   transform: translateX(21%); */
+  background-image: url(https://picsum.photos/500/300);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-image:url(./images/banner.jpg); */
-  width:70%;
-  height:100%;
+  width: 70%;
+  height: 140%;
+  border-radius: 4px;
+  transition: all ease-in-out 0.3s;
 }
 
-#carousel::before{
-  content:"";
-  position:absolute;
-  background-image:url(https://picsum.photos/1000/200);
+#carousel #carousel-image:hover {
+  transform: translateX(2.5rem) translateY(-1rem);
+  height: 140%;
+  width: 80%;
+  box-shadow: 0px 0px 15px black;
+}
+
+#carousel::before {
+  content: '';
+  border-radius: 4px;
+  position: absolute;
+  background-image: url(https://picsum.photos/1000/200);
   /* background-image:url(./images/big-banner.jpg); */
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-#latest-release{
-  margin-top: 20px;
-  width:100%;
-  height:50%;
+#latest-release {
+  width: 100%;
+  height: 50%;
 }
 
-.song-container{
-  height:70%;
-  width:84%;
-  display:flex;
-  flex-wrap:wrap;
-  gap:3%;
-  margin-top: 10px;
+.song-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin-top: var(--step--1);
+  padding: var(--step-1);
 }
 
-.div1,.div2,.div3,.div4{
-  flex: 1 1 47%;
-  display:flex;
+.div1,
+.div2,
+.div3,
+.div4 {
+  flex: 1 1 40%;
+  display: flex;
 }
 
+.image-container {
+  background-image: url(https://picsum.photos/200/200);
+  height: var(--step-8);
+  width: var(--step-8);
 
-
-.image-container{
-  background-image:url(https://picsum.photos/200/200);
-  flex:1 1 40%;
 }
 
-.caption{
-  flex:1 1 50%;
+.caption {
+  flex: 1 1 30%;
   /* padding: 0px 10px; */
 }
 
-.song-duration{
-  flex:1 1 10%;
+.song-duration {
+  flex: 1 1 10%;
 }
 
-.song-duration ul{
+.song-duration ul {
   text-align: right;
-  font-size: 14px;
+  font-size: var(--step--2);
 }
 
-.song-duration ul li{
+.song-duration ul li {
   margin-bottom: 10px;
   color: var(--icon-color);
 }
-
 
 .caption {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 2em;
+  margin-right: 2em;
 }
 
-.caption ul li{
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--text-white)
+.caption ul li {
+  font-size: var(--step--2);
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
 }
 
-.caption ul li:first-of-type{
+.caption ul li:first-of-type {
   font-weight: 600;
 }
 
-.caption ul li:last-of-type{
-  color: var(--icon-color)
+.caption ul li:last-of-type {
+  color: var(--icon-color);
 }
 
 /* Popular Artists Container */
 
-#popular-artist-container{
+#popular-artist-container {
   width: 100%;
-  height: 25%;
+  height: var(--step-11);
+  border: 2px solid aqua;
 }
 
 /* #popular-artist-container h2{
@@ -249,44 +275,42 @@ aside{
 } */
 
 .artists-container {
-  margin-top: 20px;
-  
+  margin-top: var(--step-1);
   height: 100%;
+
   display: flex;
   gap: 10px;
 }
 
-.columns {
-  min-width: 16.5%;
-}
 
-.columns>div {
-  height: 75%;
+.columns > div {
+  height: var(--step-8);
   width: 100%;
-  border-radius: 50%;
+  border-radius: 10%;
 }
 
-.image1{
+.image1 {
   background-image: url(https://quotepark.com/media/authors/ed-sheeran_ENnfzPr.detail.jpeg);
+
 }
 
-.image2{
+.image2 {
   background-image: url(https://images.sk-static.com/images/media/profile_images/artists/197928/huge_avatar);
 }
 
-.image3{
+.image3 {
   background-image: url(https://i.pinimg.com/140x140_RS/fb/9e/91/fb9e9107d10ffa773cf44932ea42d999.jpg);
 }
 
-.image4{
+.image4 {
   background-image: url(https://www.etonline.com/sites/default/files/styles/140x140/public/images/2021-12/Charlie_Puth_GettyImages-1285185581_300.jpg?h=6c83441f&itok=IfcNWsty);
 }
 
-.image5{
+.image5 {
   background-image: url(https://images.sk-static.com/images/media/profile_images/artists/2506696/large_avatar);
 }
 
-.image6{
+.image6 {
   background-image: url(https://m.media-amazon.com/images/M/MV5BMjE1NDE3ODA0MV5BMl5BanBnXkFtZTcwODQ5NTgwNQ@@._V1_QL75_UX140_CR0,12,140,140_.jpg);
 }
 
@@ -294,8 +318,6 @@ aside{
   margin-top: 1em;
   text-align: center;
   color: var(--text-white);
-  font-size: 14px;
+  font-size: var(--step--1);
   /* display:contents; */
 }
-
-
